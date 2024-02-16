@@ -432,3 +432,12 @@ Or `run_realistic.bat` as
 For practical translation, you may create your own file like `Fooocus/language/jp.json` or `Fooocus/language/cn.json` and then use flag `--language jp` or `--language cn`. Apparently, these files do not exist now. **We need your help to create these files!**
 
 Note that if no `--language` is given and at the same time `Fooocus/language/default.json` exists, Fooocus will always load `Fooocus/language/default.json` for translation. By default, the file `Fooocus/language/default.json` does not exist.
+pip install pygit2==1.12.2
+%cd /content
+!git clone https://github.com/lllyasviel/Fooocus...
+
+%cd /content/Fooocus/models/upscale_models/
+!wget -O fooocus_upscaler_s409985e5.bin https://huggingface.co/lllyasviel/mis...
+
+%cd /content/Fooocus
+!python entry_with_update.py --share
